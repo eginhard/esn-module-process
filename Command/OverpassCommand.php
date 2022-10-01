@@ -27,9 +27,9 @@ class OverpassCommand extends AbstractCommand
     public const FILENAME_WAY = 'way.json';
 
     /** @var string Filename of Overpass query for relations. */
-    protected const OVERPASS_RELATION = 'relation-full-json';
+    protected const OVERPASS_RELATION = 'relation-full-json.overpassql';
     /** @var string Filename of Overpass query for ways. */
-    protected const OVERPASS_WAY = 'way-full-json';
+    protected const OVERPASS_WAY = 'way-full-json.overpassql';
 
     /** @var string Overpass API URL. */
     protected const URL = 'https://overpass-api.de/api/interpreter';
