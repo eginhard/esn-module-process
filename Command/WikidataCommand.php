@@ -82,7 +82,8 @@ class WikidataCommand extends AbstractCommand
 
             // Check count of elements with Wikidata information.
             if (count($elements) === 0) {
-                throw new OSMException('No element with Wikidata information!');
+                $output->writeln('No element with Wikidata information!');
+                return Command::SUCCESS;
             }
 
             // Create wikidata directory to store results.
