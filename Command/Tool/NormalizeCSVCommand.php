@@ -81,6 +81,10 @@ class NormalizeCSVCommand extends AbstractCommand
             self::write($csvPath, $csv);
 
             return Command::SUCCESS;
+        } catch (FileException $error) {
+            $output->writeln(sprintf('<warning>%s</warning>', $error->getMessage()));
+
+            return Command::SUCCESS;
         } catch (Exception $error) {
             $output->writeln(sprintf('<error>%s</error>', $error->getMessage()));
 
